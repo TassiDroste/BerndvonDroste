@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernd von Droste zu Hülshoff — Welterbe in Gefahr</title>
+  <meta name="description" content="Offizielle Webseite von Prof. Dr. Bernd Freiherr von Droste zu Hülshoff, Gründungsdirektor des UNESCO-Welterbezentrums. Sein neues Buch »Welterbe in Gefahr«." />
+  <meta name="author" content="Bernd Freiherr von Droste zu Hülshoff" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Welterbe in Gefahr — Bernd von Droste zu Hülshoff" />
+  <meta property="og:description" content="Das neue Buch des Gründungsdirektors des UNESCO-Welterbezentrums. Eine interaktive Karte aller 53 bedrohten Welterbestätten." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (interactive map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Own styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============= NAVIGATION ============= -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">B. <span>v.</span> Droste zu Hülshoff</a>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#buch">Das Buch</a></li>
+      <li><a href="#karte">Karte</a></li>
+      <li><a href="#biografie">Biografie</a></li>
+      <li><a href="#ehrungen">Ehrungen</a></li>
+      <li><a href="#publikationen">Werke</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <button class="nav-toggle" id="navtoggle" aria-label="Menü öffnen">≡</button>
+  </div>
+</nav>
+
+<!-- ============= HERO ============= -->
+<header class="hero" id="top">
+  <div>
+    <div class="hero-eyebrow">Bernd Freiherr von Droste zu Hülshoff</div>
+    <h1>
+      Ein Leben
+      <span class="breakpoint">für das <em>Welterbe</em></span>
+      der Menschheit
+    </h1>
+    <p class="hero-subtitle">
+      Gründungsdirektor des UNESCO‑Welterbezentrums. Forstwissenschaftler, Ökologe, Mediator zwischen Nationen — und Chronist von 53 bedrohten Stätten unseres gemeinsamen Erbes.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        Geboren
+        <strong>1938</strong>
+      </div>
+      <div class="hero-meta-item">
+        UNESCO ab
+        <strong>1973</strong>
+      </div>
+      <div class="hero-meta-item">
+        Bereiste Staaten
+        <strong>100+</strong>
+      </div>
+      <div class="hero-meta-item">
+        Publikationen
+        <strong>200+</strong>
+      </div>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <!-- Replace this SVG with a real photograph: <img src="assets/portrait.jpg" alt="Bernd von Droste zu Hülshoff" /> -->
+    <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" aria-label="Stilisiertes Porträt">
+      <defs>
+        <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e8dcc1"/>
+          <stop offset="100%" stop-color="#c9b78f"/>
+        </linearGradient>
+        <linearGradient id="figGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3a322a"/>
+          <stop offset="100%" stop-color="#1c1814"/>
+        </linearGradient>
+        <pattern id="dotPattern" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="3" r="0.5" fill="#8c6a3c" opacity="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="300" height="400" fill="url(#bgGrad)"/>
+      <rect width="300" height="400" fill="url(#dotPattern)"/>
+      <g stroke="#8c6a3c" stroke-width="0.5" fill="none" opacity="0.35">
+        <ellipse cx="150" cy="200" rx="120" ry="120"/>
+        <ellipse cx="150" cy="200" rx="120" ry="60"/>
+        <ellipse cx="150" cy="200" rx="60" ry="120"/>
+        <line x1="30" y1="200" x2="270" y2="200"/>
+        <line x1="150" y1="80" x2="150" y2="320"/>
+      </g>
+      <g fill="url(#figGrad)">
+        <path d="M 60 400 L 60 320 Q 60 260 150 250 Q 240 260 240 320 L 240 400 Z"/>
+        <rect x="135" y="220" width="30" height="40"/>
+        <ellipse cx="150" cy="180" rx="55" ry="65"/>
+      </g>
+      <g fill="#5a4a36" opacity="0.6">
+        <ellipse cx="130" cy="165" rx="20" ry="28"/>
+      </g>
+      <path d="M 95 145 Q 150 110 205 145 Q 200 130 150 120 Q 100 130 95 145 Z" fill="#1c1814"/>
+      <g opacity="0.6">
+        <path d="M 30 380 Q 50 360 45 340 Q 55 350 48 365 Z" fill="#5a6b3a"/>
+        <path d="M 270 380 Q 250 360 255 340 Q 245 350 252 365 Z" fill="#5a6b3a"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<!-- ============= BOOK ============= -->
+<div class="section-divider"></div>
+<section class="book-section" id="buch">
+  <div class="book-inner">
+    <div class="book-cover reveal">
+      <div class="book-cover-inner">
+        <div class="book-cover-front">
+          <div class="book-author">B. v. Droste zu Hülshoff</div>
+          <svg class="book-ornament" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="#b89253" stroke-width="0.5" fill="none"/>
+            <circle cx="50" cy="50" r="35" stroke="#b89253" stroke-width="0.5" fill="none"/>
+            <path d="M 50 5 L 55 50 L 50 95 L 45 50 Z" fill="#b89253" opacity="0.6"/>
+            <path d="M 5 50 L 50 55 L 95 50 L 50 45 Z" fill="#b89253" opacity="0.6"/>
+          </svg>
+          <div>
+            <div class="book-title">Welterbe<em>in Gefahr</em></div>
+          </div>
+          <div class="book-footer">— Eine Bestandsaufnahme —</div>
+        </div>
+      </div>
+    </div>
+    <div class="book-text reveal">
+      <div class="section-eyebrow">Das neue Buch · in Vorbereitung</div>
+      <h2 class="section-title">»Welterbe <em>in Gefahr</em>«</h2>
+      <p class="lead">
+        Ein halbes Jahrhundert nach der Welterbekonvention von 1972 stehen 53 Stätten von außergewöhnlichem universellem Wert auf der Roten Liste der UNESCO.
+      </p>
+      <p>
+        Bewaffnete Konflikte, Klimawandel, ungebremste Urbanisierung, Wilderei und mangelhafter Schutz bedrohen Orte, die der Menschheit als Ganzes gehören. Vom alten Aleppo bis zu den Galápagos‑Inseln, von Timbuktu bis Wien: dieses Buch dokumentiert Verluste, Rettungen und das, was noch zu tun bleibt.
+      </p>
+      <p>
+        Aus der Feder des Mannes, der das UNESCO‑Welterbezentrum gründete und seit fünf Jahrzehnten an vorderster Front für den Schutz unseres gemeinsamen Erbes streitet.
+      </p>
+      <div class="book-details">
+        <div class="book-detail-item">
+          Genre
+          <strong>Sachbuch · Kulturpolitik</strong>
+        </div>
+        <div class="book-detail-item">
+          Sprache
+          <strong>Deutsch</strong>
+        </div>
+        <div class="book-detail-item">
+          Status
+          <strong>In Lektorat</strong>
+        </div>
+        <div class="book-detail-item">
+          Erscheinen
+          <strong>folgt</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= MAP ============= -->
+<div class="section-divider"></div>
+<section id="karte">
+  <div class="map-header">
+    <div class="reveal">
+      <div class="section-eyebrow">Interaktive Karte</div>
+      <h2 class="section-title">53 Stätten <em>in Gefahr</em></h2>
+    </div>
+    <p class="map-intro reveal">
+      Eine Weltkarte aller derzeit auf der Roten Liste der UNESCO geführten Welterbestätten. Klicken Sie auf eine Stätte, um Hintergründe und Bedrohungslage zu erfahren. Stand: November 2025.
+    </p>
+  </div>
+
+  <div class="map-stats reveal">
+    <div class="map-stat">
+      <span class="map-stat-number" id="stat-total">53</span>
+      <div class="map-stat-label">Stätten total</div>
+    </div>
+    <div class="map-stat">
+      <span class="map-stat-number" id="stat-cultural">39</span>
+      <div class="map-stat-label">Kulturerbe</div>
+    </div>
+    <div class="map-stat">
+      <span class="map-stat-number" id="stat-natural">14</span>
+      <div class="map-stat-label">Naturerbe</div>
+    </div>
+    <div class="map-stat">
+      <span class="map-stat-number" id="stat-countries">29</span>
+      <div class="map-stat-label">Länder</div>
+    </div>
+  </div>
+
+  <div class="map-controls reveal">
+    <button class="filter-btn active" data-filter="all">Alle <span class="count">53</span></button>
+    <button class="filter-btn" data-filter="cultural">Kulturerbe <span class="count">39</span></button>
+    <button class="filter-btn" data-filter="natural">Naturerbe <span class="count">14</span></button>
+    <input type="text" class="map-search" id="mapsearch" placeholder="Suche nach Stätte oder Land …" />
+  </div>
+
+  <div id="map" class="reveal"></div>
+
+  <div class="map-legend">
+    <div class="legend-item"><span class="legend-dot cultural"></span> Kulturerbe</div>
+    <div class="legend-item"><span class="legend-dot natural"></span> Naturerbe</div>
+    <div class="legend-item">Quelle: UNESCO World Heritage Centre</div>
+  </div>
+</section>
+
+<!-- ============= BIOGRAPHY ============= -->
+<div class="section-divider"></div>
+<section id="biografie">
+  <div class="reveal">
+    <div class="section-eyebrow">Biografie</div>
+    <h2 class="section-title">Der <em>Brückenbauer</em><br>zwischen Natur und Kultur</h2>
+  </div>
+
+  <div class="bio-grid">
+    <aside class="bio-aside reveal">
+      <blockquote class="bio-quote">
+        Welterbe ist kein Besitz. Es ist eine Verantwortung, die wir treuhänderisch für kommende Generationen tragen.
+        <span class="bio-quote-attr">Bernd v. Droste zu Hülshoff</span>
+      </blockquote>
+    </aside>
+
+    <div class="bio-text reveal">
+      <p>
+        Bernd Aegidius Heinrich Hubertus Freiherr von Droste zu Hülshoff wurde am 17. September 1938 in Essen geboren — als Spross einer westfälischen Familie, deren Wurzeln über neun Jahrhunderte zurückreichen und die mit der Dichterin Annette von Droste‑Hülshoff einen Ehrenplatz in der deutschen Literatur einnimmt. Aufgewachsen in Betzdorf, Haus Junkernthal und Adenau, prägte ihn früh die Welt des Waldes: sein Vater Mariano war Oberlandesforstmeister.
+      </p>
+      <p>
+        Nach dem Abitur am Aloisiuskolleg in Bad Godesberg (1957) und einem Lehrjahr beim Forstamt Mayen studierte er Forstwissenschaften in Hann. Münden, Wien und München. Praktische Stationen führten ihn schon als Studenten als Flößer nach Finnland, in die Wälder der Türkei und nach Südschweden. 1961 brachte ihn ein Stipendium nach Stellenbosch in Südafrika, wo er an der Großtierforschung im Kruger‑Nationalpark mitwirkte.
+      </p>
+
+      <h3>Der Weg zur UNESCO</h3>
+      <p>
+        Nach Promotion (summa cum laude, 1969) und Forschungstätigkeit an der Universität München wechselte Droste zu Hülshoff 1973 nach Paris zur UNESCO. Aus dem „first officer" in der Abteilung Ökologische Wissenschaften wurde 1984 deren Direktor und Sekretär des Programms Der Mensch und die Biosphäre (MAB) — jenes Programms, aus dem die weltweiten Biosphärenreservate hervorgegangen sind.
+      </p>
+
+      <h3>Gründung des Welterbezentrums</h3>
+      <p>
+        1992 schlug er die Zusammenlegung der bis dahin getrennten Sekretariate für Welt­natur‑ und Weltkulturerbe vor. UNESCO‑Generaldirektor Federico Mayor folgte dem Vorschlag — und Droste zu Hülshoff wurde Gründungsdirektor des heute weltweit renommierten Welterbezentrums sowie Generalsekretär der Welterbe‑Konvention. 1998 erhob ihn die UNESCO zum Beigeordneten Generaldirektor (ADG).
+      </p>
+
+      <h3>Im Dienst des Erbes</h3>
+      <p>
+        Seit dem Eintritt in den Ruhestand 1999 ist er als Gutachter, Berater und Mediator für UNESCO, IUCN, EU‑Kommission und Weltbank tätig. Mehr als 100 Staaten hat er bereist, oft als Team‑Leader bei der Überprüfung des Zustands von Welterbestätten. Zu seinen Mandaten zählten die Galápagos‑Inseln, der Schutz Petras in Jordanien, die Kulturlandschaft Oberes Mittelrheintal und die Pilgerrouten der Kii‑Halbinsel in Japan.
+      </p>
+      <p>
+        Als Honorarprofessor lehrte er an der Europa‑Universität Viadrina, gastweise an der Brandenburgischen Technischen Universität sowie an den Pekinger Eliteuniversitäten Beida und Tsinghua. Droste zu Hülshoff arbeitet in Deutsch, Englisch, Französisch und Spanisch.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline reveal">
+    <h3 class="timeline-title">Stationen <em>eines Lebenswerks</em></h3>
+    <ul class="timeline-list">
+      <li class="timeline-item">
+        <span class="timeline-year">1938</span>
+        <div class="timeline-content">
+          <strong>Geboren in Essen</strong>
+          Spross der westfälischen Adelsfamilie Droste zu Hülshoff
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1958–63</span>
+        <div class="timeline-content">
+          <strong>Studium der Forstwissenschaften</strong>
+          Hann. Münden, Wien, München. Auslandsstipendium in Stellenbosch, Südafrika
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1969</span>
+        <div class="timeline-content">
+          <strong>Promotion summa cum laude</strong>
+          Universität München. Forschungspreis der Universität
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1973</span>
+        <div class="timeline-content">
+          <strong>Wechsel zur UNESCO Paris</strong>
+          „First officer" in der Abteilung Ökologische Wissenschaften
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1984</span>
+        <div class="timeline-content">
+          <strong>Direktor Ökologische Wissenschaften</strong>
+          Sekretär des MAB‑Programms — Geburt der Biosphärenreservate
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1992</span>
+        <div class="timeline-content">
+          <strong>Gründungsdirektor des UNESCO‑Welterbezentrums</strong>
+          Zusammenführung von Natur‑ und Kulturerbe in einer Institution
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1998</span>
+        <div class="timeline-content">
+          <strong>Beigeordneter Generaldirektor der UNESCO</strong>
+          Höchste Ebene der UN‑Hierarchie für Bildung, Wissenschaft und Kultur
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1999</span>
+        <div class="timeline-content">
+          <strong>Ruhestand und Berater</strong>
+          Berater des UNESCO‑Generaldirektors; Beginn intensiver Gutachtertätigkeit
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2002–14</span>
+        <div class="timeline-content">
+          <strong>Honorarprofessur Viadrina</strong>
+          Master‑Studiengang „Schutz Europäischer Kulturgüter", Collegium Polonicum
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2005–06</span>
+        <div class="timeline-content">
+          <strong>Nominierungsdossier Oberes Mittelrheintal</strong>
+          Erfolgreiche Einschreibung als Kulturlandschaft des Welterbes
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">heute</span>
+        <div class="timeline-content">
+          <strong>Autor und Vordenker</strong>
+          Veröffentlichung des Buchs »Welterbe in Gefahr«
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============= HONORS ============= -->
+<div class="section-divider"></div>
+<section class="honors-section" id="ehrungen">
+  <div class="honors-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">Auszeichnungen · Würdigungen</div>
+      <h2 class="section-title">Ein Leben <em>im Dank</em><br>der Völker</h2>
+    </div>
+    <div class="honors-grid">
+      <div class="honor-card reveal">
+        <div class="honor-year">1988</div>
+        <div class="honor-title">Ehrenhäuptling der Māori</div>
+        <div class="honor-where">Neuseeland</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1989</div>
+        <div class="honor-title">Premio Sileno — Umweltpreis</div>
+        <div class="honor-where">Giardini‑Naxos, Italien</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1994</div>
+        <div class="honor-title">Ehrenbürger von Cusco und Machu Picchu</div>
+        <div class="honor-where">Peru</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1996</div>
+        <div class="honor-title">Ehrenbürger von Quito</div>
+        <div class="honor-where">Ecuador</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1997</div>
+        <div class="honor-title">Auszeichnung für die Erhaltung des Kulturerbes</div>
+        <div class="honor-where">Verliehen durch Präsident Boris Jelzin, Russland</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1998</div>
+        <div class="honor-title">Ehrenbürger von Trogir und Poreč</div>
+        <div class="honor-where">Kroatien</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">1999</div>
+        <div class="honor-title">Ehrenbürger von Leshan</div>
+        <div class="honor-where">China</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">2000</div>
+        <div class="honor-title">Verdienstorden</div>
+        <div class="honor-where">Sozialistische Republik Vietnam</div>
+      </div>
+      <div class="honor-card reveal">
+        <div class="honor-year">2012</div>
+        <div class="honor-title">Verdienstmedaille</div>
+        <div class="honor-where">Autonome Republik Krim</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PUBLICATIONS ============= -->
+<div class="section-divider"></div>
+<section id="publikationen">
+  <div class="reveal">
+    <div class="section-eyebrow">Ausgewählte Schriften</div>
+    <h2 class="section-title">Über <em>200 Beiträge</em><br>in Buch und Zeitschrift</h2>
+  </div>
+  <div class="publications reveal">
+    <div class="pub-item">
+      <div class="pub-year">1969</div>
+      <div class="pub-title">Struktur und Biomasse eines Fichtenbestandes auf Grund einer Dimensionsanalyse</div>
+      <div class="pub-publisher">Dissertation · München</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">1992</div>
+      <div class="pub-title">Das UNESCO‑Zentrum für die Erhaltung des Erbes der Menschheit</div>
+      <div class="pub-publisher">Spektrum der Wissenschaft</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">1995</div>
+      <div class="pub-title">Cultural Landscapes of Universal Value — Components of a Global Strategy</div>
+      <div class="pub-publisher">G. Fischer, Jena / VCH, Florida</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">1995</div>
+      <div class="pub-title">Kultur‑ und Naturgüter der Welt: Bedrohung und Schutz</div>
+      <div class="pub-publisher">mit B. Mayerhofer · Spektrum der Wissenschaft</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">1998</div>
+      <div class="pub-title">Linking nature and culture</div>
+      <div class="pub-publisher">Report of the Global Strategy Expert Meeting, Amsterdam</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">2006</div>
+      <div class="pub-title">A Gift from the Past to the Future — 60 Years of Science at UNESCO</div>
+      <div class="pub-publisher">UNESCO Publishing, Paris</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">2008</div>
+      <div class="pub-title">UNESCO‑Weltkulturerbe: Qualitatives Wachstum mithilfe externer Instanzen</div>
+      <div class="pub-publisher">Jahrbuch Markentechnik, Frankfurt</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">2012</div>
+      <div class="pub-title">World Heritage and globalization: UNESCO's contribution to global ethics</div>
+      <div class="pub-publisher">World Heritage Papers 31, UNESCO</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">2022</div>
+      <div class="pub-title">Zum fünfzigsten Jahrestag der Welterbe‑Konvention</div>
+      <div class="pub-publisher">Acta Carnuntina 12 · mit Ricarda Schmidt</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CONTACT ============= -->
+<div class="section-divider"></div>
+<section class="contact-section" id="kontakt">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow">Kontakt</div>
+      <h2 class="section-title">In <em>Verbindung</em><br>treten</h2>
+      <p>
+        Für Anfragen zu Vorträgen, Interviews, Gutachten oder zum Erwerb des Buchs nutzen Sie bitte das nebenstehende Formular. Für Presse‑ und Verlagsanfragen wenden Sie sich gerne direkt per E‑Mail an das Sekretariat.
+      </p>
+      <div class="contact-detail">
+        <div class="contact-detail-label">Presse · Verlag</div>
+        <div class="contact-detail-value">presse@droste‑huelshoff.de</div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-label">Sprachen</div>
+        <div class="contact-detail-value">Deutsch · Français · English · Español</div>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <!-- NOTE: For real form delivery, replace action with a Formspree, Netlify Forms, or backend endpoint -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Ihr Name</label>
+          <input type="text" id="cf-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-email">E‑Mail‑Adresse</label>
+          <input type="email" id="cf-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-subject">Betreff</label>
+          <input type="text" id="cf-subject" name="subject" />
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Ihre Nachricht</label>
+          <textarea id="cf-message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Nachricht senden →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-ornament">✦ ✦ ✦</div>
+    <div class="footer-name">Bernd Freiherr von Droste zu Hülshoff</div>
+    <div style="font-family: var(--mono); font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(244,237,224,0.55);">
+      Gründungsdirektor des UNESCO‑Welterbezentrums
+    </div>
+    <div class="footer-meta">
+      © 2026 · Alle Rechte vorbehalten · Diese Webseite begleitet das Erscheinen des Buchs »Welterbe in Gefahr«
+    </div>
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+
+<!-- Our scripts -->
+<script src="js/sites-data.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

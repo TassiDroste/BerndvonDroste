@@ -1,0 +1,92 @@
+================================================================
+  LIZENZ — Welterbe in Gefahr
+================================================================
+
+Dieses Projekt enthält zwei unterschiedlich lizenzierte Bestandteile:
+
+  1. SOFTWARE (Quellcode) — MIT-Lizenz, siehe unten.
+  2. INHALTE (Texte, Biografie, Fotos, Daten in eigener Aufbereitung,
+     redaktionelle Gestaltung) — Alle Rechte vorbehalten.
+     © 2026 Bernd Freiherr von Droste zu Hülshoff.
+
+----------------------------------------------------------------
+  1. SOFTWARE-LIZENZ (MIT)
+----------------------------------------------------------------
+
+Gilt für: HTML-, CSS- und JavaScript-Dateien des Projekts
+(index.html, css/styles.css, js/main.js, js/sites-data.js,
+assets/favicon.svg sowie die in diesem Repository enthaltene
+Projektstruktur).
+
+MIT License
+
+Copyright (c) 2026 Bernd Freiherr von Droste zu Hülshoff
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----------------------------------------------------------------
+  2. INHALTE — ALLE RECHTE VORBEHALTEN
+----------------------------------------------------------------
+
+Gilt für:
+  • Sämtliche redaktionellen Texte (Biografie, Buchvorstellung,
+    Beschreibungen der Welterbestätten in deutscher Aufbereitung,
+    Timeline-Einträge, Auszeichnungslisten etc.)
+  • Sämtliche Fotos, Porträts und Abbildungen von Bernd Freiherr
+    von Droste zu Hülshoff
+  • Buchtitel »Welterbe in Gefahr« und damit verbundene
+    Gestaltungselemente
+  • Die kuratierte Auswahl, Anordnung und deutsche Aufbereitung
+    der Daten zu UNESCO-Welterbestätten
+
+Diese Inhalte sind urheberrechtlich geschützt.
+© 2026 Bernd Freiherr von Droste zu Hülshoff. Alle Rechte vorbehalten.
+
+Jede Nutzung — insbesondere Vervielfältigung, Verbreitung, öffentliche
+Wiedergabe, Bearbeitung, Übersetzung oder Einbindung in andere Werke —
+bedarf der vorherigen schriftlichen Zustimmung des Rechteinhabers.
+Zitate im Rahmen des gesetzlichen Zitatrechts (§ 51 UrhG) bleiben
+hiervon unberührt.
+
+Anfragen zur Nutzung der Inhalte:
+  presse@droste-huelshoff.de
+
+----------------------------------------------------------------
+  3. DRITTANBIETER-RESSOURCEN
+----------------------------------------------------------------
+
+Diese Webseite verwendet folgende externe Ressourcen unter deren
+jeweiligen Lizenzen:
+
+  • Leaflet (JavaScript-Bibliothek für Karten)
+      BSD-2-Clause-Lizenz, © Vladimir Agafonkin
+      https://leafletjs.com/
+
+  • OpenStreetMap (Kartendaten)
+      Open Database License (ODbL)
+      © OpenStreetMap-Mitwirkende
+      https://www.openstreetmap.org/copyright
+
+  • Google Fonts (Cormorant Garamond, Cardo, DM Mono)
+      SIL Open Font License 1.1
+      https://fonts.google.com/
+
+  • Rohdaten der UNESCO-Welterbeliste
+      © UNESCO World Heritage Centre
+      https://whc.unesco.org/en/danger/
