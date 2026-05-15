@@ -1,6 +1,6 @@
 # Welterbe in Gefahr
 
-Offizielle Webseite von **Prof. Dr. Bernhard Freiherr von Droste zu Hülshoff** — Gründungsdirektor des UNESCO‑Welterbezentrums — anlässlich des Erscheinens seines Buchs *»Welterbe in Gefahr«*.
+Offizielle Webseite von **Prof. Dr. Bernd Freiherr von Droste zu Hülshoff** — Gründungsdirektor des UNESCO‑Welterbezentrums — anlässlich des Erscheinens seines Buchs *»Welterbe in Gefahr«*.
 
 ## 🌍 Über das Projekt
 
@@ -84,7 +84,7 @@ Für eine eigene Domain (z. B. `droste-huelshoff.de`) eine `CNAME`-Datei im Repo
 In `index.html` den `<svg>`-Block innerhalb von `.hero-portrait` durch ein echtes Foto ersetzen:
 ```html
 <div class="hero-portrait">
-  <img src="assets/portrait.jpg" alt="Bernhard von Droste zu Hülshoff" />
+  <img src="assets/portrait.jpg" alt="Bernd von Droste zu Hülshoff" />
 </div>
 ```
 
@@ -120,7 +120,7 @@ Sämtliche Farben sind als CSS‑Variablen im `:root`‑Block von `css/styles.cs
 
 ## 📊 Datenquellen
 
-- **Biografische Daten:** [Wikipedia — Bernhard von Droste zu Hülshoff](https://de.wikipedia.org/wiki/Bernd_von_Droste_zu_Hülshoff)
+- **Biografische Daten:** [Wikipedia — Bernd von Droste zu Hülshoff](https://de.wikipedia.org/wiki/Bernd_von_Droste_zu_Hülshoff)
 - **Welterbe in Gefahr:** [UNESCO World Heritage Centre](https://whc.unesco.org/en/danger/)
 - **Kartenkacheln:** © [OpenStreetMap](https://www.openstreetmap.org/copyright)-Mitwirkende
 
@@ -132,7 +132,7 @@ Dieses Projekt ist in zwei Bestandteile geteilt:
 Veröffentlicht unter der **MIT-Lizenz** — frei verwendbar, veränderbar und weiterverbreitbar, auch kommerziell. Lediglich der Copyright-Hinweis muss erhalten bleiben.
 
 ### Inhalte (Texte, Fotos, Biografie, redaktionelle Aufbereitung)
-**© 2026 Bernhard Freiherr von Droste zu Hülshoff. Alle Rechte vorbehalten.**
+**© 2026 Bernd Freiherr von Droste zu Hülshoff. Alle Rechte vorbehalten.**
 
 Die biografischen Texte, die deutschsprachige Aufbereitung und Beschreibung der Welterbestätten, Porträts, Fotos sowie der Buchtitel *»Welterbe in Gefahr«* sind urheberrechtlich geschützt. Jede Nutzung — insbesondere Kopieren, Verbreiten, Übersetzen oder Einbinden in andere Werke — bedarf der vorherigen schriftlichen Zustimmung.
 
