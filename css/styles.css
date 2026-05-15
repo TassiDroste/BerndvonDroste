@@ -1,6 +1,6 @@
 /* ============================================================
-   Welterbe in Gefahr — Stylesheet
-   © 2026 Bernd Freiherr von Droste zu Hülshoff
+   Welterbe in Gefahr â€” Stylesheet
+   Â© 2026 Bernd Freiherr von Droste zu HÃ¼lshoff
    ============================================================ */
 
 :root {
@@ -296,7 +296,7 @@ section {
   background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
 }
 .section-divider::after {
-  content: '✦';
+  content: 'âœ¦';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -699,7 +699,7 @@ section {
   text-align: center;
 }
 .preface-heading::after {
-  content: '✦';
+  content: 'âœ¦';
   display: block;
   margin-top: 18px;
   color: var(--bronze);
@@ -743,7 +743,7 @@ section {
   text-align: left;
 }
 .preface-quote::before {
-  content: '„';
+  content: 'â€ž';
   font-family: var(--serif-display);
   font-size: 4rem;
   line-height: 0;
