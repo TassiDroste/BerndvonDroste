@@ -742,24 +742,6 @@ section {
   margin: 36px 0;
   text-align: left;
 }
-.preface-quote::before {
-  content: 'â€ž';
-  font-family: var(--serif-display);
-  font-size: 4rem;
-  line-height: 0;
-  color: var(--bronze);
-  vertical-align: -0.3em;
-  margin-right: 4px;
-}
-.preface-quote::after {
-  content: '"';
-  font-family: var(--serif-display);
-  font-size: 4rem;
-  line-height: 0;
-  color: var(--bronze);
-  vertical-align: -0.5em;
-  margin-left: 4px;
-}
 .preface-signature {
   margin-top: 60px;
   padding-top: 36px;
