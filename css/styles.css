@@ -125,6 +125,33 @@ nav.scrolled { padding: 12px 0; }
   font-size: 1.2rem;
   border-radius: 2px;
 }
+.lang-switch {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.lang-switch:hover {
+  border-color: var(--bronze);
+  background: var(--parchment-warm);
+}
+.lang-switch .lang-active {
+  color: var(--ink);
+  font-weight: 500;
+}
+.lang-switch .lang-other {
+  color: var(--stone);
+}
+.lang-switch .lang-sep {
+  color: var(--line);
+  margin: 0 2px;
+}
 
 /* ============= HERO ============= */
 .hero {

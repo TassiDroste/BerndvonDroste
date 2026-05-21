@@ -69,7 +69,12 @@
       iconAnchor: [12, 12]
     });
     const marker = L.marker([site.lat, site.lng], { icon: icon });
-    const tagLabel = site.type === 'natural' ? 'Naturerbe' : 'Kulturerbe';
+    const isEn = document.documentElement.lang === 'en';
+    const tagLabel = site.type === 'natural'
+      ? (isEn ? 'Natural' : 'Naturerbe')
+      : (isEn ? 'Cultural' : 'Kulturerbe');
+    const labelListed = isEn ? 'Inscribed' : 'Eingeschrieben';
+    const labelSince = isEn ? 'In Danger since' : 'In Gefahr seit';
     const popup = `
       <div class="popup-title">${site.name}</div>
       <div class="popup-meta">
@@ -77,7 +82,7 @@
         ${site.country}
       </div>
       <div class="popup-meta" style="border-top: 1px solid var(--line); padding-top: 8px; margin-top: 8px;">
-        Eingeschrieben: ${site.listed} · In Gefahr seit: ${site.since}
+        ${labelListed}: ${site.listed} · ${labelSince}: ${site.since}
       </div>
       <div class="popup-desc">${site.threat}</div>
     `;
@@ -163,13 +168,14 @@
       const btn = e.target.querySelector('.form-submit');
       if (!btn) return;
       const orig = btn.textContent;
-      btn.textContent = 'Wird gesendet …';
+      const isEn = document.documentElement.lang === 'en';
+      btn.textContent = isEn ? 'Sending …' : 'Wird gesendet …';
       // NOTE: This is a stub. For real delivery, replace with:
       //   - Formspree:  set form action="https://formspree.io/f/YOUR_ID"
       //   - Netlify:    add attribute netlify
       //   - Custom API: fetch() to backend endpoint
       setTimeout(() => {
-        btn.textContent = 'Danke — wir melden uns ✓';
+        btn.textContent = isEn ? 'Thank you — we will be in touch ✓' : 'Danke — wir melden uns ✓';
         btn.style.background = 'var(--moss)';
         e.target.reset();
         setTimeout(() => {
