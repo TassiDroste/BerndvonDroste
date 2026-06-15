@@ -186,3 +186,18 @@
     });
   }
 })();
+
+/* ============= LESEPROBEN: Anriss aufklappen ============= */
+(function () {
+  const excerpts = document.querySelectorAll('.excerpt');
+  excerpts.forEach((ex) => {
+    const btn = ex.querySelector('.excerpt-toggle');
+    if (!btn) return;
+    const label = btn.querySelector('.excerpt-toggle-label');
+    btn.addEventListener('click', () => {
+      const open = ex.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (label) label.textContent = open ? 'Weniger anzeigen' : 'Weiterlesen';
+    });
+  });
+})();
