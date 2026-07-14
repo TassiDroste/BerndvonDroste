@@ -161,6 +161,7 @@
   map.once('click', () => map.scrollWheelZoom.enable());
 
   // ============= CONTACT FORM =============
+  const CONTACT_EMAIL = 'info@olms-presse.de';
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -169,20 +170,42 @@
       if (!btn) return;
       const orig = btn.textContent;
       const isEn = document.documentElement.lang === 'en';
-      btn.textContent = isEn ? 'Sending …' : 'Wird gesendet …';
-      // NOTE: This is a stub. For real delivery, replace with:
-      //   - Formspree:  set form action="https://formspree.io/f/YOUR_ID"
-      //   - Netlify:    add attribute netlify
-      //   - Custom API: fetch() to backend endpoint
+
+      // Read the form fields
+      const val = (name) => {
+        const el = contactForm.querySelector('[name="' + name + '"]');
+        return el ? el.value.trim() : '';
+      };
+      const name = val('name');
+      const email = val('email');
+      const subject = val('subject');
+      const message = val('message');
+
+      // Compose a mailto: link so the message is delivered to the contact address
+      // via the visitor's own e-mail programme (works on a static site without a backend).
+      const subjectLine = subject
+        ? subject
+        : (isEn ? 'Website enquiry' : 'Anfrage über die Webseite');
+      const bodyLines = isEn
+        ? ['Name: ' + name, 'E-mail: ' + email, '', message]
+        : ['Name: ' + name, 'E-Mail: ' + email, '', message];
+      const href = 'mailto:' + CONTACT_EMAIL +
+        '?subject=' + encodeURIComponent(subjectLine) +
+        '&body=' + encodeURIComponent(bodyLines.join('\n'));
+
+      btn.textContent = isEn ? 'Opening your e-mail …' : 'E-Mail wird geöffnet …';
+      window.location.href = href;
+
       setTimeout(() => {
-        btn.textContent = isEn ? 'Thank you — we will be in touch ✓' : 'Danke — wir melden uns ✓';
+        btn.textContent = isEn
+          ? 'Your e-mail programme should open ✓'
+          : 'Ihr E-Mail-Programm öffnet sich ✓';
         btn.style.background = 'var(--moss)';
-        e.target.reset();
         setTimeout(() => {
           btn.textContent = orig;
           btn.style.background = '';
-        }, 3000);
-      }, 600);
+        }, 4000);
+      }, 800);
     });
   }
 })();

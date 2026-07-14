@@ -136,7 +136,7 @@ Veröffentlicht unter der **MIT-Lizenz** — frei verwendbar, veränderbar und w
 
 Die biografischen Texte, die deutschsprachige Aufbereitung und Beschreibung der Welterbestätten, Porträts, Fotos sowie der Buchtitel *»Welterbe in Gefahr«* sind urheberrechtlich geschützt. Jede Nutzung — insbesondere Kopieren, Verbreiten, Übersetzen oder Einbinden in andere Werke — bedarf der vorherigen schriftlichen Zustimmung.
 
-Anfragen: **presse@droste-huelshoff.de**
+Anfragen: **info@olms-presse.de**
 
 Vollständiger Lizenztext und Hinweise zu Drittanbieter-Ressourcen: siehe [LICENSE](LICENSE).
 
