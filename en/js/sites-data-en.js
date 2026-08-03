@@ -2,7 +2,7 @@
    UNESCO World Heritage in Danger — Site Data (English)
    ------------------------------------------------------------
    Source: UNESCO World Heritage Centre (whc.unesco.org/en/danger/)
-   As of November 2025 — 53 sites (39 cultural / 14 natural)
+   As of July 2026 (48th session, Busan) — 58 sites (43 cultural / 15 natural)
    ------------------------------------------------------------
    Fields per site:
      name    — Official English name
@@ -40,15 +40,17 @@ const sites = [
   { name: "Hatra", country: "Iraq", type: "cultural", lat: 35.5786, lng: 42.7197, since: 2015, listed: 1985, threat: "Destruction by Islamic State forces." },
   { name: "Samarra Archaeological City", country: "Iraq", type: "cultural", lat: 34.1985, lng: 43.8742, since: 2007, listed: 2007, threat: "Aftermath of the Iraq War; insufficient state control." },
 
-  // ── PALESTINE (3) ──────────────────────────────────────────
+  // ── PALESTINE (4) ──────────────────────────────────────────
   { name: "Old Town of Hebron / Al‑Khalil", country: "Palestine", type: "cultural", lat: 31.5246, lng: 35.1106, since: 2017, listed: 2017, threat: "Conflict; structural deterioration." },
   { name: "Battir — Land of Olives and Vines", country: "Palestine", type: "cultural", lat: 31.7203, lng: 35.1378, since: 2014, listed: 2014, threat: "Israeli separation barrier; farmers cut off from their fields." },
   { name: "Saint Hilarion Monastery / Tell Umm Amer", country: "Palestine", type: "cultural", lat: 31.4467, lng: 34.3858, since: 2024, listed: 2024, threat: "Gaza war." },
+  { name: "Sebastia", country: "Palestine", type: "cultural", lat: 32.2765, lng: 35.1897, since: 2026, listed: 2026, threat: "Armed conflict; planned expropriation that would divide the site (emergency procedure, 2026)." },
 
-  // ── UKRAINE (3) — Russian war of aggression ────────────────
+  // ── UKRAINE (4) — Russian war of aggression ────────────────
   { name: "Historic Centre of Odesa", country: "Ukraine", type: "cultural", lat: 46.4825, lng: 30.7233, since: 2023, listed: 2023, threat: "Russo-Ukrainian war." },
   { name: "Kyiv: Saint Sophia Cathedral & Kyiv Pechersk Lavra", country: "Ukraine", type: "cultural", lat: 50.4528, lng: 30.5147, since: 2023, listed: 1990, threat: "Russo-Ukrainian war." },
   { name: "L'viv — Ensemble of the Historic Centre", country: "Ukraine", type: "cultural", lat: 49.8419, lng: 24.0316, since: 2023, listed: 1998, threat: "Russo-Ukrainian war." },
+  { name: "Ancient City of Tauric Chersonese and its Chora", country: "Ukraine", type: "cultural", lat: 44.6117, lng: 33.4931, since: 2026, listed: 2013, threat: "Unauthorised excavations and construction projects by the occupying authorities in Crimea." },
 
   // ── DR CONGO (4) — Natural heritage in conflict zones ──────
   { name: "Virunga National Park", country: "DR Congo", type: "natural", lat: -0.7500, lng: 29.2000, since: 1994, listed: 1979, threat: "Poaching, deforestation, consequences of civil war." },
@@ -61,7 +63,8 @@ const sites = [
   { name: "Tomb of Askia", country: "Mali", type: "cultural", lat: 16.2900, lng: -0.0420, since: 2012, listed: 2004, threat: "Damage by Islamist groups." },
   { name: "Old Towns of Djenné", country: "Mali", type: "cultural", lat: 13.9050, lng: -4.5550, since: 2016, listed: 1988, threat: "Regional insecurity; decay; uncontrolled urbanisation." },
 
-  // ── REST OF AFRICA (5) ─────────────────────────────────────
+  // ── REST OF AFRICA (6) ─────────────────────────────────────
+  { name: "Boma-Badingilo Migratory Landscape", country: "South Sudan", type: "natural", lat: 6.0000, lng: 33.0000, since: 2026, listed: 2026, threat: "Poaching plus infrastructure and oil projects threaten the largest land-mammal migration on Earth (emergency procedure, 2026)." },
   { name: "Mount Nimba Strict Nature Reserve", country: "Guinea / Côte d'Ivoire", type: "natural", lat: 7.5500, lng: -8.4500, since: 1992, listed: 1981, threat: "Iron ore mining; refugee influx." },
   { name: "Aïr and Ténéré Natural Reserves", country: "Niger", type: "natural", lat: 18.5000, lng: 8.5000, since: 1992, listed: 1991, threat: "Insurgency, unrest, decline of wildlife populations." },
   { name: "Manovo-Gounda St Floris National Park", country: "Central African Republic", type: "natural", lat: 8.6667, lng: 21.5000, since: 1997, listed: 1988, threat: "Illegal grazing, poaching, precarious security situation." },
@@ -72,7 +75,8 @@ const sites = [
   { name: "Cultural Landscape and Archaeological Remains of the Bamiyan Valley", country: "Afghanistan", type: "cultural", lat: 34.8500, lng: 67.8333, since: 2003, listed: 2003, threat: "Abandonment, military action, prior destruction of the Buddhas." },
   { name: "Minaret and Archaeological Remains of Jam", country: "Afghanistan", type: "cultural", lat: 34.3961, lng: 64.5158, since: 2002, listed: 2002, threat: "Lack of legal protection; poor state of conservation." },
 
-  // ── AMERICAS & CARIBBEAN (7) ───────────────────────────────
+  // ── AMERICAS & CARIBBEAN (8) ───────────────────────────────
+  { name: "Historic Inner City of Paramaribo", country: "Suriname", type: "cultural", lat: 5.8232, lng: -55.1679, since: 2026, listed: 2002, threat: "New construction projects alter the historic urban landscape; decay of the wooden architecture." },
   { name: "City of Potosí", country: "Bolivia", type: "cultural", lat: -19.5836, lng: -65.7531, since: 2014, listed: 1987, threat: "Ongoing mining destabilises the Cerro Rico." },
   { name: "Coro and its Port", country: "Venezuela", type: "cultural", lat: 11.4022, lng: -69.6722, since: 2005, listed: 1993, threat: "Damage from heavy rains 2004/05; lack of conservation measures." },
   { name: "Chan Chan Archaeological Zone", country: "Peru", type: "cultural", lat: -8.1058, lng: -79.0758, since: 1986, listed: 1986, threat: "Natural erosion of the adobe architecture." },
@@ -87,11 +91,14 @@ const sites = [
   { name: "East Rennell", country: "Solomon Islands", type: "natural", lat: -11.6833, lng: 160.3167, since: 2013, listed: 1998, threat: "Impact of logging on the ecosystem." },
   { name: "Tropical Rainforest Heritage of Sumatra", country: "Indonesia", type: "natural", lat: 2.5000, lng: 99.5000, since: 2011, listed: 2004, threat: "Poaching, illegal logging, road building, agriculture." },
 
-  // ── EUROPE & OTHER (4) ─────────────────────────────────────
+  // ── EUROPE & OTHER (5) ─────────────────────────────────────
+  // Note: The Historic Centre of Vienna was removed from the Danger List at the
+  //       48th session (Busan, July 2026) and therefore no longer appears on the map.
   { name: "Medieval Monuments in Kosovo", country: "Kosovo / Serbia", type: "cultural", lat: 42.6450, lng: 20.2872, since: 2006, listed: 2004, threat: "Lack of legal protection; political instability." },
-  { name: "Historic Centre of Vienna", country: "Austria", type: "cultural", lat: 48.2082, lng: 16.3738, since: 2017, listed: 2001, threat: "New high-rise projects affecting the historic skyline." },
   { name: "Roșia Montană Mining Landscape", country: "Romania", type: "cultural", lat: 46.3000, lng: 23.1300, since: 2021, listed: 2021, threat: "Plans to resume mining activities." },
   { name: "Rachid Karami International Fair-Tripoli", country: "Lebanon", type: "cultural", lat: 34.4361, lng: 35.8497, since: 2023, listed: 2023, threat: "Lebanese liquidity crisis; lack of funds for conservation." },
+  { name: "Mount Amel Castles (Jabal Amel)", country: "Lebanon", type: "cultural", lat: 33.1917, lng: 35.4170, since: 2026, listed: 2026, threat: "Heavy damage from the armed conflict in southern Lebanon (emergency procedure, 2026)." },
+  { name: "Tyre", country: "Lebanon", type: "cultural", lat: 33.2705, lng: 35.1963, since: 2026, listed: 1984, threat: "Direct war damage to the ancient Phoenician port in southern Lebanon." },
 
   // ── ISRAEL / JERUSALEM (1) ─────────────────────────────────
   { name: "Old City of Jerusalem and its Walls", country: "Jerusalem", type: "cultural", lat: 31.7767, lng: 35.2345, since: 1982, listed: 1981, threat: "Uncontrolled urban development; general deterioration." }

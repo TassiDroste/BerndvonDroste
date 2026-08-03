@@ -2,7 +2,7 @@
    UNESCO World Heritage in Danger — Site Data
    ------------------------------------------------------------
    Source: UNESCO World Heritage Centre (whc.unesco.org/en/danger/)
-   Stand: November 2025 — 53 Stätten (39 Kultur / 14 Natur)
+   Stand: Juli 2026 (48. Sitzung, Busan) — 58 Stätten (43 Kultur / 15 Natur)
    ------------------------------------------------------------
    Felder pro Stätte:
      name    — Deutscher Name der Stätte
@@ -40,15 +40,17 @@ const sites = [
   { name: "Hatra", country: "Irak", type: "cultural", lat: 35.5786, lng: 42.7197, since: 2015, listed: 1985, threat: "Zerstörung durch den Islamischen Staat." },
   { name: "Archäologische Stadt Samarra", country: "Irak", type: "cultural", lat: 34.1985, lng: 43.8742, since: 2007, listed: 2007, threat: "Folgen des Irakkriegs, mangelnde staatliche Kontrolle." },
 
-  // ── PALÄSTINA (3) ──────────────────────────────────────────
+  // ── PALÄSTINA (4) ──────────────────────────────────────────
   { name: "Altstadt Hebron / Al‑Khalil", country: "Palästina", type: "cultural", lat: 31.5246, lng: 35.1106, since: 2017, listed: 2017, threat: "Konflikt, baulicher Verfall." },
   { name: "Battir — Land der Oliven und Reben", country: "Palästina", type: "cultural", lat: 31.7203, lng: 35.1378, since: 2014, listed: 2014, threat: "Israelische Sperranlage; Bauern werden von Feldern getrennt." },
   { name: "Kloster St. Hilarion / Tell Umm Amer", country: "Palästina", type: "cultural", lat: 31.4467, lng: 34.3858, since: 2024, listed: 2024, threat: "Gaza‑Krieg." },
+  { name: "Sebastia", country: "Palästina", type: "cultural", lat: 32.2765, lng: 35.1897, since: 2026, listed: 2026, threat: "Bewaffneter Konflikt; geplante Enteignung und Zerschneidung des Geländes (Notfallverfahren 2026)." },
 
-  // ── UKRAINE (3) — Russischer Angriffskrieg ─────────────────
+  // ── UKRAINE (4) — Russischer Angriffskrieg ─────────────────
   { name: "Historisches Zentrum von Odesa", country: "Ukraine", type: "cultural", lat: 46.4825, lng: 30.7233, since: 2023, listed: 2023, threat: "Russisch‑ukrainischer Krieg." },
   { name: "Kyjiw: Sophienkathedrale & Kyjiwer Höhlenkloster", country: "Ukraine", type: "cultural", lat: 50.4528, lng: 30.5147, since: 2023, listed: 1990, threat: "Russisch‑ukrainischer Krieg." },
   { name: "Lwiw — Ensemble des historischen Zentrums", country: "Ukraine", type: "cultural", lat: 49.8419, lng: 24.0316, since: 2023, listed: 1998, threat: "Russisch‑ukrainischer Krieg." },
+  { name: "Antike Stadt Tauric Chersonesus und ihre Chora", country: "Ukraine", type: "cultural", lat: 44.6117, lng: 33.4931, since: 2026, listed: 2013, threat: "Nicht genehmigte Grabungen und Bauprojekte der Besatzungsbehörden auf der Krim." },
 
   // ── DR KONGO (4) — Naturerbe in Konfliktzonen ──────────────
   { name: "Virunga‑Nationalpark", country: "DR Kongo", type: "natural", lat: -0.7500, lng: 29.2000, since: 1994, listed: 1979, threat: "Wilderei, Abholzung, Folgen des Bürgerkriegs." },
@@ -61,7 +63,8 @@ const sites = [
   { name: "Grabmal von Askia", country: "Mali", type: "cultural", lat: 16.2900, lng: -0.0420, since: 2012, listed: 2004, threat: "Beschädigungen durch islamistische Gruppen." },
   { name: "Altstädte von Djenné", country: "Mali", type: "cultural", lat: 13.9050, lng: -4.5550, since: 2016, listed: 1988, threat: "Regionale Unsicherheit, Verfall, unkontrollierte Urbanisierung." },
 
-  // ── WEITERES AFRIKA (5) ────────────────────────────────────
+  // ── WEITERES AFRIKA (6) ────────────────────────────────────
+  { name: "Boma‑Badingilo‑Wanderlandschaft", country: "Südsudan", type: "natural", lat: 6.0000, lng: 33.0000, since: 2026, listed: 2026, threat: "Wilderei sowie Infrastruktur‑ und Ölprojekte bedrohen die größte Landtier‑Wanderung der Erde (Notfallverfahren 2026)." },
   { name: "Mount Nimba Strict Nature Reserve", country: "Guinea / Côte d'Ivoire", type: "natural", lat: 7.5500, lng: -8.4500, since: 1992, listed: 1981, threat: "Eisenerzbergbau, Flüchtlingsströme." },
   { name: "Air‑ und Ténéré‑Naturreservate", country: "Niger", type: "natural", lat: 18.5000, lng: 8.5000, since: 1992, listed: 1991, threat: "Aufstände, Unruhen, Rückgang der Tierpopulation." },
   { name: "Manovo‑Gounda‑St‑Floris‑Nationalpark", country: "Zentralafrikanische Republik", type: "natural", lat: 8.6667, lng: 21.5000, since: 1997, listed: 1988, threat: "Illegale Beweidung, Wilderei, prekäre Sicherheitslage." },
@@ -72,7 +75,8 @@ const sites = [
   { name: "Bamiyan‑Tal: Kulturlandschaft & archäologische Reste", country: "Afghanistan", type: "cultural", lat: 34.8500, lng: 67.8333, since: 2003, listed: 2003, threat: "Verlassen, militärische Aktion, frühere Sprengung der Buddhas." },
   { name: "Minarett und archäologische Reste von Dscham", country: "Afghanistan", type: "cultural", lat: 34.3961, lng: 64.5158, since: 2002, listed: 2002, threat: "Mangelnder gesetzlicher Schutz, schlechter Erhaltungszustand." },
 
-  // ── AMERIKA & KARIBIK (7) ──────────────────────────────────
+  // ── AMERIKA & KARIBIK (8) ──────────────────────────────────
+  { name: "Historische Innenstadt von Paramaribo", country: "Suriname", type: "cultural", lat: 5.8232, lng: -55.1679, since: 2026, listed: 2002, threat: "Neubauprojekte verändern das historische Stadtbild; Verfall der Holzarchitektur." },
   { name: "Stadt Potosí", country: "Bolivien", type: "cultural", lat: -19.5836, lng: -65.7531, since: 2014, listed: 1987, threat: "Anhaltender Bergbau destabilisiert den Cerro Rico." },
   { name: "Coro und sein Hafen", country: "Venezuela", type: "cultural", lat: 11.4022, lng: -69.6722, since: 2005, listed: 1993, threat: "Schäden durch Starkregen 2004/05, fehlende Erhaltungsmaßnahmen." },
   { name: "Chan Chan, archäologische Zone", country: "Peru", type: "cultural", lat: -8.1058, lng: -79.0758, since: 1986, listed: 1986, threat: "Natürliche Erosion der Lehmziegelarchitektur." },
@@ -87,11 +91,14 @@ const sites = [
   { name: "East Rennell", country: "Salomonen", type: "natural", lat: -11.6833, lng: 160.3167, since: 2013, listed: 1998, threat: "Auswirkungen der Holzwirtschaft auf das Ökosystem." },
   { name: "Tropisches Regenwalderbe von Sumatra", country: "Indonesien", type: "natural", lat: 2.5000, lng: 99.5000, since: 2011, listed: 2004, threat: "Wilderei, illegaler Holzeinschlag, Straßenbau, Landwirtschaft." },
 
-  // ── EUROPA & SONSTIGE (4) ──────────────────────────────────
+  // ── EUROPA & SONSTIGE (5) ──────────────────────────────────
+  // Hinweis: Das Historische Zentrum von Wien wurde in der 48. Sitzung (Busan, Juli 2026)
+  //          von der Roten Liste gestrichen und ist daher nicht mehr auf der Karte.
   { name: "Mittelalterliche Denkmäler im Kosovo", country: "Kosovo / Serbien", type: "cultural", lat: 42.6450, lng: 20.2872, since: 2006, listed: 2004, threat: "Fehlender gesetzlicher Schutz, politische Instabilität." },
-  { name: "Historisches Zentrum von Wien", country: "Österreich", type: "cultural", lat: 48.2082, lng: 16.3738, since: 2017, listed: 2001, threat: "Neue Hochhausprojekte beeinträchtigen die historische Silhouette." },
   { name: "Bergbaulandschaft Roșia Montană", country: "Rumänien", type: "cultural", lat: 46.3000, lng: 23.1300, since: 2021, listed: 2021, threat: "Pläne zur Wiederaufnahme von Bergbauaktivitäten." },
   { name: "Internationale Rachid‑Karami‑Messe Tripoli", country: "Libanon", type: "cultural", lat: 34.4361, lng: 35.8497, since: 2023, listed: 2023, threat: "Libanesische Liquiditätskrise, fehlende Mittel für den Erhalt." },
+  { name: "Burgen von Mount Amel (Jabal Amel)", country: "Libanon", type: "cultural", lat: 33.1917, lng: 35.4170, since: 2026, listed: 2026, threat: "Schwere Schäden durch den bewaffneten Konflikt in Südlibanon (Notfallverfahren 2026)." },
+  { name: "Tyros (Tyre)", country: "Libanon", type: "cultural", lat: 33.2705, lng: 35.1963, since: 2026, listed: 1984, threat: "Direkte Kriegsschäden am antiken Phönizierhafen in Südlibanon." },
 
   // ── ISRAEL / JERUSALEM (1) ─────────────────────────────────
   { name: "Altstadt von Jerusalem und ihre Mauern", country: "Jerusalem", type: "cultural", lat: 31.7767, lng: 35.2345, since: 1982, listed: 1981, threat: "Unkontrollierte städtische Entwicklung, allgemeiner Verschlechterungszustand." }

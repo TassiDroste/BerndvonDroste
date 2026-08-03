@@ -1280,6 +1280,24 @@ section {
   color: var(--ink-soft);
   margin-bottom: 16px;
 }
+.example-content p.example-update {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: var(--parchment-deep);
+  border-left: 3px solid var(--bronze);
+  border-radius: 2px;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.example-content p.example-update strong {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bronze-deep);
+  display: block;
+  margin-bottom: 6px;
+}
 
 @media (max-width: 900px) {
   .page-header { padding: 130px 24px 60px; }

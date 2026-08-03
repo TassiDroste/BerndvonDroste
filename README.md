@@ -4,12 +4,12 @@ Offizielle Webseite von **Prof. Dr. Bernd Freiherr von Droste zu Hülshoff** —
 
 ## 🌍 Über das Projekt
 
-Die Webseite stellt das Lebenswerk eines der einflussreichsten Akteure im internationalen Kultur‑ und Naturerbeschutz vor und enthält eine **interaktive Weltkarte aller 53 derzeit auf der Roten Liste der UNESCO geführten Welterbestätten** (Stand: November 2025).
+Die Webseite stellt das Lebenswerk eines der einflussreichsten Akteure im internationalen Kultur‑ und Naturerbeschutz vor und enthält eine **interaktive Weltkarte aller 58 derzeit auf der Roten Liste der UNESCO geführten Welterbestätten** (Stand: Juli 2026, 48. Sitzung Busan).
 
 ### Funktionen
 
 - 📖 **Buchvorstellung** — Präsentation des neuen Buchs *»Welterbe in Gefahr«*
-- 🗺️ **Interaktive Karte** — Alle 53 bedrohten Welterbestätten mit Filterung nach Kultur‑/Naturerbe und Volltextsuche (Leaflet + OpenStreetMap)
+- 🗺️ **Interaktive Karte** — Alle 58 bedrohten Welterbestätten mit Filterung nach Kultur‑/Naturerbe und Volltextsuche (Leaflet + OpenStreetMap)
 - 📜 **Biografie** — Lebenslauf mit illustrierter Zeitleiste
 - 🏆 **Ehrungen** — Internationale Auszeichnungen und Ehrenbürgerschaften
 - 📚 **Publikationen** — Auswahl aus über 200 wissenschaftlichen Beiträgen
@@ -33,7 +33,7 @@ Reines HTML/CSS/JavaScript ohne Build-Schritt. Keine Frameworks, keine Abhängig
 ├── css/
 │   └── styles.css          # Sämtliche Stile
 ├── js/
-│   ├── sites-data.js       # Datensatz der 53 Welterbestätten
+│   ├── sites-data.js       # Datensatz der 58 Welterbestätten
 │   └── main.js             # Navigation, Karte, Formular
 ├── assets/
 │   └── favicon.svg         # Favicon
