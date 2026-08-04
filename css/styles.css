@@ -2041,3 +2041,182 @@ footer .footer-credits a:hover {
 }
 .footer-legal a:hover { color: var(--parchment-warm); border-color: var(--parchment-warm); }
 .footer-legal .sep { color: rgba(244, 237, 224, 0.4); margin: 0 10px; }
+
+/* ============= PRESSE ============= */
+.press {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+}
+.press-inner { max-width: 900px; }
+.press-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.press-release {
+  border: 1px solid var(--line);
+  background: var(--parchment-warm);
+  box-shadow: 0 24px 48px -30px var(--shadow);
+  padding: 48px 52px;
+  border-radius: 2px;
+}
+.press-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.press-tag {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bronze-deep);
+  border: 1px solid var(--line);
+  background: var(--parchment);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.press-date {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+.press-headline {
+  font-family: var(--serif-display);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.press-standfirst {
+  font-family: var(--serif-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+.press-body h3 {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bronze-deep);
+  margin: 34px 0 14px;
+}
+.press-body p {
+  font-family: var(--serif-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.press-body blockquote {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink);
+  border-left: 3px solid var(--bronze);
+  padding: 6px 0 6px 24px;
+  margin: 22px 0;
+}
+.press-facts {
+  margin: 30px 0 4px;
+  padding: 22px 26px;
+  background: var(--parchment-deep);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+.press-facts h3 { margin-top: 0; }
+.press-facts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.press-facts li {
+  font-family: var(--serif-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.press-facts li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--bronze);
+  font-size: 0.7rem;
+  line-height: 1.9;
+}
+.press-contact {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  font-family: var(--serif-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.press-contact strong {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bronze-deep);
+  display: block;
+  margin-bottom: 8px;
+}
+.press-contact a {
+  color: var(--bronze-deep);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.press-contact a:hover { color: var(--terracotta); border-color: var(--terracotta); }
+.press-download {
+  margin-top: 30px;
+}
+.press-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--parchment);
+  background: var(--bronze-deep);
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.2s;
+}
+.press-download-btn:hover {
+  background: var(--terracotta);
+  transform: translateY(-1px);
+}
+.press-download-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+@media (max-width: 720px) {
+  .press { padding: 0 20px 30px; }
+  .press-release { padding: 32px 24px; }
+  .press-list { gap: 44px; }
+}
