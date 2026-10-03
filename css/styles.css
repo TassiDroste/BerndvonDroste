@@ -1143,6 +1143,16 @@ section {
   margin-bottom: 14px;
   line-height: 1.2;
 }
+.examples-feature-credit {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
 
 .page-cta {
   margin-top: 60px;
