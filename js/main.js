@@ -224,3 +224,59 @@
     });
   });
 })();
+
+/* ============= LIGHTBOX (Buchmesse-Galerie) ============= */
+(function () {
+  const triggers = document.querySelectorAll('.premiere-lb');
+  if (!triggers.length) return;
+
+  const isEn = document.documentElement.lang === 'en';
+  const closeLabel = isEn ? 'Close' : 'Schließen';
+
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.innerHTML =
+    '<button type="button" class="lightbox-close" aria-label="' + closeLabel + '">×</button>' +
+    '<figure><img alt="" /><figcaption></figcaption></figure>';
+  document.body.appendChild(overlay);
+
+  const lbImg = overlay.querySelector('img');
+  const lbCap = overlay.querySelector('figcaption');
+  const closeBtn = overlay.querySelector('.lightbox-close');
+
+  function open(src, caption, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    if (caption) {
+      lbCap.textContent = caption;
+      lbCap.style.display = '';
+    } else {
+      lbCap.style.display = 'none';
+    }
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  triggers.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      open(btn.dataset.full, btn.dataset.caption, img ? img.alt : '');
+    });
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay || e.target === closeBtn) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+  });
+})();
